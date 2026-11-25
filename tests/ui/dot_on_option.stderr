@@ -1,0 +1,10 @@
+error[E0609]: no field `name` on type `Option<Logger>`
+  --> tests/ui/dot_on_option.rs:15:29
+   |
+15 |     let _ = obj!(app.logger.name);
+   |                             ^^^^ unknown field
+   |
+help: one of the expressions' fields has a field of the same name
+   |
+15 |     let _ = obj!(app.logger.unwrap().name);
+   |                             +++++++++

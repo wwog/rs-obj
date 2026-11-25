@@ -1,0 +1,17 @@
+error[E0308]: mismatched types
+ --> tests/ui/json_root_must_be_value.rs:5:13
+  |
+5 |     let _ = obj!(json: text.a);
+  |             ^^^^^^^^^^^^^^^^^^
+  |             |
+  |             expected `&Value`, found `&String`
+  |             arguments to this function are incorrect
+  |
+  = note: expected reference `&obj::__private::serde_json::Value`
+             found reference `&String`
+note: function defined here
+ --> src/lib.rs
+  |
+  |     pub fn require_value(value: &serde_json::Value) -> &serde_json::Value {
+  |            ^^^^^^^^^^^^^
+  = note: this error originates in the macro `obj` (in Nightly builds, run with -Z macro-backtrace for more info)

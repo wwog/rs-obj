@@ -1,0 +1,20 @@
+error[E0308]: mismatched types
+ --> tests/ui/question_on_plain_leaf.rs:9:18
+  |
+9 |     let _ = obj!(app.name?);
+  |             -----^^^^^^^^--
+  |             |    |
+  |             |    expected `Option<_>`, found `String`
+  |             arguments to this function are incorrect
+  |
+  = note: expected enum `Option<_>`
+           found struct `String`
+note: function defined here
+ --> src/lib.rs
+  |
+  |     pub fn require_option<T>(value: Option<T>) -> Option<T> {
+  |            ^^^^^^^^^^^^^^
+help: try wrapping the expression in `Some`
+  |
+9 |     let _ = obj!(Some(app.name)?);
+  |                  +++++        +

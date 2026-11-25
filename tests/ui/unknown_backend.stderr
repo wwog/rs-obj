@@ -1,0 +1,5 @@
+error: 未知的数据后端 `toml:`；V1 只支持 `json:`
+ --> tests/ui/unknown_backend.rs:5:18
+  |
+5 |     let _ = obj!(toml: config.database);
+  |                  ^^^^

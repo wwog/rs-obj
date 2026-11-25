@@ -1,0 +1,17 @@
+[package]
+name = "obj-macro"
+version = "0.1.0"
+edition = "2024"
+description = "`obj!` 宏的 proc-macro 实现；请通过 `obj` crate 使用"
+license = "MIT"
+
+[lib]
+proc-macro = true
+
+# 独立项目：不并入上层 agent workspace。
+[workspace]
+
+[dependencies]
+proc-macro2 = "1.0"
+quote = "1.0"
+syn = { version = "3.0.10", features = ["full"] }

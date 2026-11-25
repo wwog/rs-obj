@@ -1,0 +1,18 @@
+[package]
+name = "obj"
+version = "0.1.0"
+edition = "2024"
+description = "TypeScript 风格的属性访问宏：结构体直接取字段，JSON 用 `as T` 指定最终类型"
+license = "MIT"
+
+# 独立项目：不并入上层 agent workspace。
+[workspace]
+
+[dependencies]
+obj-macro = { path = "./obj-macro" }
+serde = "1.0"
+serde_json = "1.0"
+
+[dev-dependencies]
+serde = { version = "1.0", features = ["derive"] }
+trybuild = "1.0"

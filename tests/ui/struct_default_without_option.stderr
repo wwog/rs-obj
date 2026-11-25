@@ -1,0 +1,5 @@
+error: `??` 只能跟在包含 `?.` 的访问链后面
+ --> tests/ui/struct_default_without_option.rs:9:38
+  |
+9 |     let _: String = obj!(app.name ?? "fallback".to_string());
+  |                                      ^^^^^^^^^^^^^^^^^^^^^^

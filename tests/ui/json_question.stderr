@@ -1,0 +1,5 @@
+error: JSON 访问不需要 `?.`：缺失节点会自动返回 None
+ --> tests/ui/json_question.rs:6:27
+  |
+6 |     let _ = obj!(json: res?.a);
+  |                           ^

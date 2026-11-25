@@ -1,0 +1,5 @@
+error: 结构体访问不使用 `as`：最终类型由字段类型决定，例如 `obj!(app.logger.root)`
+ --> tests/ui/struct_as.rs:9:30
+  |
+9 |     let _ = obj!(app.name as String);
+  |                              ^^^^^^

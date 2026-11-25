@@ -1,0 +1,5 @@
+error: 结构体访问不支持索引 `[...]`；索引只用于动态后端，例如 `obj!(json: data[0])`
+ --> tests/ui/struct_index.rs:9:22
+  |
+9 |     let _ = obj!(app[0]);
+  |                      ^
